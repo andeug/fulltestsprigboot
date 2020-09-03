@@ -1,0 +1,14 @@
+   _____               _                _______           _                    _                _            
+  / ____|             | |              |__   __|         | |                  | |              (_)           
+ | (___    ___   __ _ | |_  ___   ___     | |  ___   ___ | |__   _ __    ___  | |  ___    __ _  _   ___  ___ 
+  \___ \  / _ \ / _` || __|/ _ \ / __|    | | / _ \ / __|| '_ \ | '_ \  / _ \ | | / _ \  / _` || | / _ \/ __|
+  ____) ||  __/| (_| || |_|  __/| (__     | ||  __/| (__ | | | || | | || (_) || || (_) || (_| || ||  __/\__ \
+ |_____/  \___| \__,_| \__|\___| \___|    |_| \___| \___||_| |_||_| |_| \___/ |_| \___/  \__, ||_| \___||___/
+                                                                                          __/ |              
+                                                                                         |___/               
+                                                                                         
+                                                                                         by Andrew EUgine Simiyu
+                                                                                         Application Name: ${application.title}
+Application Version: ${application.version}
+${AnsiColor.RED} :: Spring Boot${spring-boot.formatted-version} :: ${AnsiColor.RED}
+${AnsiColor.DEFAULT}

@@ -1,0 +1,29 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashAccessEncoder">
+            <pattern>common</pattern>
+            <fieldNames>
+                <requestHeaders>request_headers</requestHeaders>
+                <responseHeaders>response_headers</responseHeaders>
+            </fieldNames>
+            <fieldNames class="net.logstash.logback.fieldnames.ShortenedFieldNames"/>
+            <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+            <shortenedLoggerNameLength>36</shortenedLoggerNameLength>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/home/ASimiyu/Desktop/output.log</file>
+        <encoder class="net.logstash.logback.encoder.LogstashAccessEncoder">
+            <pattern>common</pattern>
+            <fieldNames>
+                <requestHeaders>request_headers</requestHeaders>
+                <responseHeaders>response_headers</responseHeaders>
+            </fieldNames>
+            <fieldNames class="net.logstash.logback.fieldnames.ShortenedFieldNames"/>
+            <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+            <shortenedLoggerNameLength>36</shortenedLoggerNameLength>
+        </encoder>
+    </appender>
+    <appender-ref ref="CONSOLE"/>
+    <appender-ref ref="FILE"/>
+</configuration>

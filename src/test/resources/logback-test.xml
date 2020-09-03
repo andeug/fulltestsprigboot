@@ -1,0 +1,36 @@
+<configuration>
+    <!--
+    //  uncomment for file logging
+     <appender name="jsonConsoleAppender" class="ch.qos.logback.core.FileAppender">
+        <file>/home/ASimiyu/Desktop/output.log</file>
+
+        // add to include caller methods class and file including line of code.
+
+  <customFields>{"appname":"myWebservice","roles":["customerorder","auth"],"buildinfo":{"version":"Version 0.1.0-SNAPSHOT","lastcommit":"75473700d5befa953c45f630c6d9105413c16fe1"}}</customFields>
+
+-->
+    <appender name="jsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <fieldNames class="net.logstash.logback.fieldnames.ShortenedFieldNames"/>
+            <customFields>{"application":"fulltestspringboot"}</customFields>
+            <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+            <includeCallerData>true</includeCallerData>
+            <shortenedLoggerNameLength>36</shortenedLoggerNameLength>
+
+        </encoder>
+    </appender>
+
+    <appender name="jsonFileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>/home/ASimiyu/Desktop/output.log</file>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <fieldNames class="net.logstash.logback.fieldnames.ShortenedFieldNames"/>
+            <customFields>"app-test"</customFields>
+            <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+            <shortenedLoggerNameLength>36</shortenedLoggerNameLength>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="jsonConsoleAppender"/>
+        <appender-ref ref="jsonFileAppender"/>
+    </root>
+</configuration>
