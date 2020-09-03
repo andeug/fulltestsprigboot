@@ -17,7 +17,9 @@ public class Listener {
 
     @EventListener
     public void productCreationListener(ProductEvent event) {
-        LOGGER.info("Spring Listener Tutor -> {}", event);
+        LOGGER.info("Spring Listener Tutor -> ProductID:{}, ProductDesc:{}, ProductName:{}",
+                event.getProductModel().getProductId()
+                , event.getProductModel().getProductDesc(), event.getProductModel().getProductName());
     }
 
 }
