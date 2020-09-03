@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
  * @author ASimiyu on 8/27/20 3:19 PM
  * project -> fulltestspingboot
@@ -14,7 +16,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Data
-public class ProductModel {
+public class ProductModel implements Serializable {
     private int productId;
     private String productName;
     private String productDesc;

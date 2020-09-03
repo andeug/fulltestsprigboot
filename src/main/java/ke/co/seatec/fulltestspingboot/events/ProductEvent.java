@@ -11,7 +11,7 @@ import java.io.Serializable;
  * package -> ke.co.seatec.fulltestspingboot.events
  */
 public class ProductEvent extends ApplicationEvent implements Serializable {
-    
+
     private ProductModel productModel;
 
     public ProductEvent(Object source, ProductModel productModel) {
